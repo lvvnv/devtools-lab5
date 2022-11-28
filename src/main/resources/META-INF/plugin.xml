@@ -1,0 +1,60 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.github.lvvnv.devtools-lab5</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>HotkeySearch</name>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="levvshk@mail.ru" url="https://github.com/lvvnv">lvvnv</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    Translate and search in different engines using only hotkeys. Alt + Shift + H for help
+  ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+    <actions>
+        <action id="com.github.lvvnv.devtoolslab5.YandexSearchAction" class="com.github.lvvnv.devtoolslab5.YandexSearchAction"
+                text="Yandex Search">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift alt Y"/>
+        </action>
+        <action id="com.github.lvvnv.devtoolslab5.GoogleSearchAction"
+                class="com.github.lvvnv.devtoolslab5.GoogleSearchAction" text="Google Search">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift alt L"/>
+        </action>
+        <action id="com.github.lvvnv.devtoolslab5.SOFSearchAction" class="com.github.lvvnv.devtoolslab5.SOFSearchAction"
+                text="StackOverflow Search">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift alt O"/>
+        </action>
+        <action id="com.github.lvvnv.devtoolslab5.QuoraSearchAction"
+                class="com.github.lvvnv.devtoolslab5.QuoraSearchAction" text="Quora Search">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift alt Q"/>
+        </action>
+        <action id="com.github.lvvnv.devtoolslab5.DDGSearchAction" class="com.github.lvvnv.devtoolslab5.DDGSearchAction"
+                text="DuckDuckGo Action">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift alt D"/>
+        </action>
+        <action id="com.github.lvvnv.devtoolslab5.TranslateAction" class="com.github.lvvnv.devtoolslab5.TranslateAction"
+                text="Translation">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift alt A"/>
+        </action>
+        <action id="com.github.lvvnv.devtoolslab5.HelpAction" class="com.github.lvvnv.devtoolslab5.HelpAction"
+                text="Help">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift alt H"/>
+        </action>
+    </actions>
+</idea-plugin>
